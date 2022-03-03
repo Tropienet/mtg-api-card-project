@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
-import Picture from './Picture'
-import logo from './logo.svg';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 
-function App() {
-  const [items,setItems] = useState([]);
+function App(props) {
+  const { items } = props
+  const [currentCard,setCurrentCard] = useState({});
+  /*const [items,setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -22,15 +22,20 @@ function App() {
       setIsLoading(false);
     }
     console.log(items);
-  }, [items]);
+  }, [items]);*/
 
-  function logData() {
-    
-    let alpha = `${items.cards[2]}`
-    console.log(alpha)
-  }
+
+ 
+
   return (
-    <div className="App">
+    <ul>
+      {items.cards.map((card) => (
+        <>
+        <li key={card.id} ><Link to={`${card.id}`}>{card.name}</Link></li>
+        </>
+      ))}
+    </ul>
+   /* <div className="App">
       {isLoading? (
         <h1>Loading...</h1>
       ) : ( 
@@ -42,25 +47,9 @@ function App() {
       )}
       <div>This is the division</div>
 
-      {isLoading? (
-        <h1>Loading...</h1>
-      ) : (
-      <BrowserRouter>
-          <nav>
-            <ul>
-              {items.cards.map((card) => (
-               <li key={card.id}><Link to={`/card/${card.name}`}>{card.name}</Link></li>
-              ))}
-            </ul>
-          </nav>
-          <Routes>
-            <Route path="card/:type" element={<Picture />}>
-              
-            </Route>
-          </Routes>
-      </BrowserRouter>
-      )}
-    </div>
+   
+    </div>*/
+   
   );
 }
 
