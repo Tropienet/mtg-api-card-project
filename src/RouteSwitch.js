@@ -20,7 +20,7 @@ const RouteSwitch = () => {
       if(items.length !==0) {
         setIsLoading(false);
       }
-      console.log(items);
+      console.log(items.cards);
     }, [items]);
 
 

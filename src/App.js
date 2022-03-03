@@ -30,9 +30,9 @@ function App(props) {
   return (
     <ul>
       {items.cards.map((card) => (
-        <>
+        
         <li key={card.id} ><Link to={`${card.id}`}>{card.name}</Link></li>
-        </>
+        
       ))}
     </ul>
    /* <div className="App">
