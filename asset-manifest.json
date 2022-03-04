@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/mtg-api-card-project/static/css/main.a61fa646.css",
+    "main.js": "/mtg-api-card-project/static/js/main.e52ba43e.js",
+    "static/js/787.ffe959f9.chunk.js": "/mtg-api-card-project/static/js/787.ffe959f9.chunk.js",
+    "static/media/magicCardBack.jpg": "/mtg-api-card-project/static/media/magicCardBack.f9a38f4b8ceec8091e68.jpg",
+    "index.html": "/mtg-api-card-project/index.html",
+    "main.a61fa646.css.map": "/mtg-api-card-project/static/css/main.a61fa646.css.map",
+    "main.e52ba43e.js.map": "/mtg-api-card-project/static/js/main.e52ba43e.js.map",
+    "787.ffe959f9.chunk.js.map": "/mtg-api-card-project/static/js/787.ffe959f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a61fa646.css",
+    "static/js/main.e52ba43e.js"
+  ]
+}
