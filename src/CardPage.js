@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import magicCardBack from './images/magicCardBack.jpg'
 
 const CardPageContainer = styled.div`
     display: flex;
@@ -13,6 +14,9 @@ const CardImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 40%;
+`
+const CardFrontBack = styled.div`
+    display: flex;
 `
 
 const CardImage = styled.img`
@@ -51,14 +55,19 @@ function CardPage(props) {
 
                     ))}
                 </ul>
-                {card.legalities.map((legality) => (
-                    
-                            <p key={legality.format}>{legality.format} {legality.legality}</p>
-                      
+                <ul>
+                {card.legalities.map((legalityInfo) => (
+                      legalityInfo.legality === "Legal" 
+                      ? ( <li key={legalityInfo.format} className="legal">{legalityInfo.format} : {legalityInfo.legality}</li>) 
+                      : (<li key={legalityInfo.legality} className="restricted">{legalityInfo.format} : {legalityInfo.legality}</li>)
                     ))}
+                </ul>
             </CardInfoContainer>
             <CardImageContainer>
-                <CardImage src={card.imageUrl} alt={card.imageUrl}></CardImage>
+                <CardFrontBack>
+                    <CardImage src={card.imageUrl} alt={card.imageUrl}></CardImage>
+                    <CardImage src={magicCardBack} alt="The back side of a magic the gathering card"></CardImage>
+                </CardFrontBack>
                 <p>{card.artist}</p>
                 {card.flavor && 
                     <p>{card.flavor}</p>

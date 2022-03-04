@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import magicCardBack from './images/magicCardBack.jpg';
 import './App.css';
+
+
 
 
 function App(props) {
@@ -28,10 +32,10 @@ function App(props) {
  
 
   return (
-    <ul>
+    <ul className='card-list'>
       {items.cards.map((card) => (
         
-        <li key={card.id} ><Link to={`${card.id}`}>{card.name}</Link></li>
+        <li key={card.id} className="card-list-item"><Link to={`${card.id}`}>{card.name}</Link></li>
         
       ))}
     </ul>

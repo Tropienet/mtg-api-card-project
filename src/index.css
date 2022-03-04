@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ul.card-list{
+  columns: 4;
+}
+
+li.card-list-item{
+  font-size: 30px;
+  list-style: none;
+}
+
+li.card-list-item:not(:last-child){
+  margin-bottom: 20px;
+}
+
+li.card-list-item:before{
+  content: "\1F0A0"
+}
+
+li.legal{
+  list-style: none;
+}
+
+li.restricted{
+  list-style: none;
+}
+
+li.legal:before{
+  content: "\2705"
+}
+
+li.restricted:before{
+  content: "\274C"
+}
