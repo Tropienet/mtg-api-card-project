@@ -29,7 +29,7 @@ const RouteSwitch = () => {
             {isLoading ? (
                 <h1>Loading...</h1>
             ) : (
-                <BrowserRouter basename={process.env.PUBLIC_URL}>
+                <BrowserRouter >
                 <Routes>
                     <Route path="/" element={<App items={items}/>} />
                     {items.cards.map((card) => (
