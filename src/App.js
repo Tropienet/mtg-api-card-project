@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import magicCardBack from './images/magicCardBack.jpg';
+import HomeNavbar from './HomeNavbar';
 import './App.css';
 
 
@@ -9,7 +8,7 @@ import './App.css';
 
 function App(props) {
   const { items } = props
-  const [currentCard,setCurrentCard] = useState({});
+ 
   /*const [items,setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -32,13 +31,16 @@ function App(props) {
  
 
   return (
-    <ul className='card-list'>
-      {items.cards.map((card) => (
-        
-        <li key={card.id} className="card-list-item"><Link to={`${card.id}`}>{card.name}</Link></li>
-        
-      ))}
-    </ul>
+    <>
+      <HomeNavbar />
+      <ul className='card-list'>
+        {items.cards.map((card) => (
+          
+          <li key={card.id} className="card-list-item"><Link to={`${card.id}`}>{card.name}</Link></li>
+          
+        ))}
+      </ul>
+    </>
    /* <div className="App">
       {isLoading? (
         <h1>Loading...</h1>
