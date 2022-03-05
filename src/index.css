@@ -30,10 +30,12 @@ li.card-list-item:before{
 }
 
 li.legal{
+  color: #FDF0D5;
   list-style: none;
 }
 
 li.restricted{
+  color: #FDF0D5;
   list-style: none;
 }
 
@@ -43,4 +45,12 @@ li.legal:before{
 
 li.restricted:before{
   content: "\274C"
+}
+
+p{
+  color: #FDF0D5;
+}
+
+li.printed-sets{
+  color: #FDF0D5;
 }

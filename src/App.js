@@ -1,14 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import HomeNavbar from './HomeNavbar';
-import './App.css';
-
-
-
+import React from "react";
+import { Link } from "react-router-dom";
+import HomeNavbar from "./HomeNavbar";
+import "./App.css";
 
 function App(props) {
-  const { items } = props
- 
+  const { items } = props;
+
   /*const [items,setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -27,21 +24,18 @@ function App(props) {
     console.log(items);
   }, [items]);*/
 
-
- 
-
   return (
     <>
       <HomeNavbar />
-      <ul className='card-list'>
+      <ul className="card-list">
         {items.cards.map((card) => (
-          
-          <li key={card.id} className="card-list-item"><Link to={`${card.id}`}>{card.name}</Link></li>
-          
+          <li key={card.id} className="card-list-item">
+            <Link to={`${card.id}`}>{card.name}</Link>
+          </li>
         ))}
       </ul>
     </>
-   /* <div className="App">
+    /* <div className="App">
       {isLoading? (
         <h1>Loading...</h1>
       ) : ( 
@@ -55,7 +49,6 @@ function App(props) {
 
    
     </div>*/
-   
   );
 }
 
