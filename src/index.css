@@ -1,56 +1,60 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-ul.card-list{
+ul.card-list {
   columns: 4;
 }
 
-li.card-list-item{
+li.card-list-item {
   font-size: 30px;
   list-style: none;
 }
 
-li.card-list-item:not(:last-child){
+li.card-list-item:not(:last-child) {
   margin-bottom: 20px;
 }
 
-li.card-list-item:before{
-  content: "\1F3B4"
+li.card-list-item:before {
+  content: "\1F3B4";
 }
 
-li.legal{
-  color: #FDF0D5;
+li.legal {
+  color: #fdf0d5;
   list-style: none;
 }
 
-li.restricted{
-  color: #FDF0D5;
+li.restricted {
+  color: #fdf0d5;
   list-style: none;
 }
 
-li.legal:before{
-  content: "\2705"
+li.legal:before {
+  font-size: 20px;
+  content: "\2705";
 }
 
-li.restricted:before{
-  content: "\274C"
+li.restricted:before {
+  font-size: 20px;
+  content: "\274C";
 }
 
-p{
-  color: #FDF0D5;
+p {
+  color: #fdf0d5;
 }
 
-li.printed-sets{
-  color: #FDF0D5;
+li.printed-sets {
+  font-size: 20px;
+  color: #fdf0d5;
+  margin-left: 45px;
 }

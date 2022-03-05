@@ -5,9 +5,13 @@ import HomeNavbar from "./HomeNavbar";
 const CardPageContainer = styled.div`
   display: flex;
   background-color: #3a3335;
+  height: 100%;
 `;
 
 const CardInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
   width: 60%;
 `;
 const CardImageContainer = styled.div`
@@ -30,7 +34,14 @@ const CardImage = styled.img`
 
 const CardName = styled.h2`
   color: #fdf0d5;
+  font-size: 30px;
+  align-self: center;
+  margin: 25px;
+`;
+
+const CardInfoText = styled.p`
   font-size: 20px;
+  margin: 10px 0 10px 50px;
 `;
 
 const CardFlavor = styled.p`
@@ -46,17 +57,17 @@ function CardPage(props) {
       <CardPageContainer>
         <CardInfoContainer>
           <CardName>{card.name}</CardName>
-          <p>Card mana cost: {card.manaCost}</p>
-          <p>Combined mana cost: {card.cmc}</p>
-          <p>Card colors:{card.colors}</p>
-          <p>Card type: {card.type}</p>
-          <p>
+          <CardInfoText>Card mana cost: {card.manaCost}</CardInfoText>
+          <CardInfoText>Combined mana cost: {card.cmc}</CardInfoText>
+          <CardInfoText>Card colors:{card.colors}</CardInfoText>
+          <CardInfoText>Card type: {card.type}</CardInfoText>
+          <CardInfoText>
             Power {card.power} / Toughness {card.toughness}
-          </p>
-          <p>
+          </CardInfoText>
+          <CardInfoText>
             Set name: {card.setName} ({card.set})
-          </p>
-          <p>Printed in sets:</p>
+          </CardInfoText>
+          <CardInfoText>Printed in sets:</CardInfoText>
           <ul>
             {card.printings.map((setInWhichTheCardWasPrinted) => (
               <li key={setInWhichTheCardWasPrinted} className="printed-sets">
